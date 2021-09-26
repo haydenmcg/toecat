@@ -46,7 +46,7 @@ endforeach()
 
 include(FetchContent)
 FetchContent_Declare(soem
-    GIT_REPOSITORY git@github.com:OpenEtherCATsociety/SOEM.git
+    GIT_REPOSITORY https://github.com/OpenEtherCATsociety/SOEM.git
     GIT_TAG 354466a534d2fcd60c670b1b9e94b38035d503bc
     )
 FetchContent_MakeAvailable(soem)
