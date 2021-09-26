@@ -1,11 +1,17 @@
 cmake_minimum_required(VERSION 3.14)
-project(tcbTest
-    DESCRIPTION "For EtherCAT Fun (FEF)"
+project(toecat
+    DESCRIPTION "Testing Opensource EtherCAT"
     VERSION 0.0.1
     LANGUAGES C CXX
     )
 
+# Build Type 
 set(CMAKE_BUILD_TYPE Debug)
+
+# Build Output Location
+set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
+set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 
 add_compile_options(
     -Wall
@@ -73,15 +79,15 @@ list(APPEND SOEM_INCLUDE_DIRS
     ${soem_SOURCE_DIR}/oshw/${OS}
     )
 
-add_subdirectory(src)
+add_subdirectory(app/followerInfo)
+add_subdirectory(app/createFollowerStruct)
 
 ######### Install Rules #########
 if(CMAKE_SOURCE_DIR STREQUAL CMAKE_CURRENT_SOURCE_DIR)
-    #install(DIRECTORY tcbTest DESTINATION bin)
     install(DIRECTORY ${CMAKE_BINARY_DIR}/include/tcb DESTINATION include)
     install(DIRECTORY ${CMAKE_BINARY_DIR}/bin/ DESTINATION bin)
     install(TARGETS followerInfo DESTINATION bin)
-    #install(TARGETS followerinfo DESTINATION bin)
+    install(TARGETS createFollowerStruct DESTINATION bin)
 endif()
 
-#install(TARGETS tcbTest DESTINATION bin)
+
