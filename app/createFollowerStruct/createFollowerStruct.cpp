@@ -11,199 +11,22 @@
  * (c)Arthur Ketels 2010 - 2011
  */
 
+//-----------------------------------------------------------------------------
 #include <stdio.h>
 #include <string.h>
 #include <inttypes.h>
-
+#include <ecat2String.h>
 #include "ethercat.h"
 
+//-----------------------------------------------------------------------------
 char IOmap[4096];
 ec_ODlistt ODlist;
 ec_OElistt OElist;
 boolean printSDO = FALSE;
 boolean printMAP = FALSE;
-char usdo[128];
-char hstr[1024];
+boolean printCyclic = FALSE;
+boolean printAcyclic = FALSE;
 
-char* dtype2string(uint16 dtype)
-{
-    switch(dtype)
-    {
-        case ECT_BOOLEAN:
-            sprintf(hstr, "BOOLEAN");
-            break;
-        case ECT_INTEGER8:
-            sprintf(hstr, "INTEGER8");
-            break;
-        case ECT_INTEGER16:
-            sprintf(hstr, "INTEGER16");
-            break;
-        case ECT_INTEGER32:
-            sprintf(hstr, "INTEGER32");
-            break;
-        case ECT_INTEGER24:
-            sprintf(hstr, "INTEGER24");
-            break;
-        case ECT_INTEGER64:
-            sprintf(hstr, "INTEGER64");
-            break;
-        case ECT_UNSIGNED8:
-            sprintf(hstr, "UNSIGNED8");
-            break;
-        case ECT_UNSIGNED16:
-            sprintf(hstr, "UNSIGNED16");
-            break;
-        case ECT_UNSIGNED32:
-            sprintf(hstr, "UNSIGNED32");
-            break;
-        case ECT_UNSIGNED24:
-            sprintf(hstr, "UNSIGNED24");
-            break;
-        case ECT_UNSIGNED64:
-            sprintf(hstr, "UNSIGNED64");
-            break;
-        case ECT_REAL32:
-            sprintf(hstr, "REAL32");
-            break;
-        case ECT_REAL64:
-            sprintf(hstr, "REAL64");
-            break;
-        case ECT_BIT1:
-            sprintf(hstr, "BIT1");
-            break;
-        case ECT_BIT2:
-            sprintf(hstr, "BIT2");
-            break;
-        case ECT_BIT3:
-            sprintf(hstr, "BIT3");
-            break;
-        case ECT_BIT4:
-            sprintf(hstr, "BIT4");
-            break;
-        case ECT_BIT5:
-            sprintf(hstr, "BIT5");
-            break;
-        case ECT_BIT6:
-            sprintf(hstr, "BIT6");
-            break;
-        case ECT_BIT7:
-            sprintf(hstr, "BIT7");
-            break;
-        case ECT_BIT8:
-            sprintf(hstr, "BIT8");
-            break;
-        case ECT_VISIBLE_STRING:
-            sprintf(hstr, "VISIBLE_STRING");
-            break;
-        case ECT_OCTET_STRING:
-            sprintf(hstr, "OCTET_STRING");
-            break;
-        default:
-            sprintf(hstr, "Type 0x%4.4X", dtype);
-    }
-    return hstr;
-}
-
-char* SDO2string(uint16 follower, uint16 index, uint8 subidx, uint16 dtype)
-{
-   int l = sizeof(usdo) - 1, i;
-   uint8 *u8;
-   int8 *i8;
-   uint16 *u16;
-   int16 *i16;
-   uint32 *u32;
-   int32 *i32;
-   uint64 *u64;
-   int64 *i64;
-   float *sr;
-   double *dr;
-   char es[32];
-
-   memset(&usdo, 0, 128);
-   ec_SDOread(follower, index, subidx, FALSE, &l, &usdo, EC_TIMEOUTRXM);
-   if (EcatError)
-   {
-      return ec_elist2string();
-   }
-   else
-   {
-      switch(dtype)
-      {
-         case ECT_BOOLEAN:
-            u8 = (uint8*) &usdo[0];
-            if (*u8) sprintf(hstr, "TRUE");
-             else sprintf(hstr, "FALSE");
-            break;
-         case ECT_INTEGER8:
-            i8 = (int8*) &usdo[0];
-            sprintf(hstr, "0x%2.2x %d", *i8, *i8);
-            break;
-         case ECT_INTEGER16:
-            i16 = (int16*) &usdo[0];
-            sprintf(hstr, "0x%4.4x %d", *i16, *i16);
-            break;
-         case ECT_INTEGER32:
-         case ECT_INTEGER24:
-            i32 = (int32*) &usdo[0];
-            sprintf(hstr, "0x%8.8x %d", *i32, *i32);
-            break;
-         case ECT_INTEGER64:
-            i64 = (int64*) &usdo[0];
-            sprintf(hstr, "0x%16.16" PRIx64 " %" PRId64, *i64, *i64);
-            break;
-         case ECT_UNSIGNED8:
-            u8 = (uint8*) &usdo[0];
-            sprintf(hstr, "0x%2.2x %u", *u8, *u8);
-            break;
-         case ECT_UNSIGNED16:
-            u16 = (uint16*) &usdo[0];
-            sprintf(hstr, "0x%4.4x %u", *u16, *u16);
-            break;
-         case ECT_UNSIGNED32:
-         case ECT_UNSIGNED24:
-            u32 = (uint32*) &usdo[0];
-            sprintf(hstr, "0x%8.8x %u", *u32, *u32);
-            break;
-         case ECT_UNSIGNED64:
-            u64 = (uint64*) &usdo[0];
-            sprintf(hstr, "0x%16.16" PRIx64 " %" PRIu64, *u64, *u64);
-            break;
-         case ECT_REAL32:
-            sr = (float*) &usdo[0];
-            sprintf(hstr, "%f", *sr);
-            break;
-         case ECT_REAL64:
-            dr = (double*) &usdo[0];
-            sprintf(hstr, "%f", *dr);
-            break;
-         case ECT_BIT1:
-         case ECT_BIT2:
-         case ECT_BIT3:
-         case ECT_BIT4:
-         case ECT_BIT5:
-         case ECT_BIT6:
-         case ECT_BIT7:
-         case ECT_BIT8:
-            u8 = (uint8*) &usdo[0];
-            sprintf(hstr, "0x%x", *u8);
-            break;
-         case ECT_VISIBLE_STRING:
-            strcpy(hstr, usdo);
-            break;
-         case ECT_OCTET_STRING:
-            hstr[0] = 0x00;
-            for (i = 0 ; i < l ; i++)
-            {
-               sprintf(es, "0x%2.2x ", usdo[i]);
-               strcat( hstr, es);
-            }
-            break;
-         default:
-            sprintf(hstr, "Unknown type");
-      }
-      return hstr;
-   }
-}
 
 /** Read PDO assign structure */
 int si_PDOassign(uint16 follower, uint16 PDOassign, int mapoffset, int bitoffset)
@@ -480,8 +303,12 @@ void si_sdo(int cnt)
         {
             ec_readODdescription(i, &ODlist);
             while(EcatError) printf("%s", ec_elist2string());
-            printf(" Index: %4.4x Datatype: %4.4x Objectcode: %2.2x Name: %s\n",
-                ODlist.Index[i], ODlist.DataType[i], ODlist.ObjectCode[i], ODlist.Name[i]);
+            //printf(" Index: %4.4x Datatype: %4.4x Objectcode: %2.2x Name: %s\n",
+            //    ODlist.Index[i], ODlist.DataType[i], ODlist.ObjectCode[i], ODlist.Name[i]);
+            
+            //printf(" 0x%4.4x , %s\n", ODlist.Index[i], ODlist.Name[i]);
+
+
             memset(&OElist, 0, sizeof(OElist));
             ec_readOE(i, &ODlist, &OElist);
             while(EcatError) printf("%s", ec_elist2string());
@@ -489,14 +316,31 @@ void si_sdo(int cnt)
             {
                 if ((OElist.DataType[j] > 0) && (OElist.BitLength[j] > 0))
                 {
-                    printf("  Sub: %2.2x Datatype: %4.4x Bitlength: %4.4x Obj.access: %4.4x Name: %s\n",
-                        j, OElist.DataType[j], OElist.BitLength[j], OElist.ObjAccess[j], OElist.Name[j]);
-                    if ((OElist.ObjAccess[j] & 0x0007))
+                    //printf("  Sub: %2.2x Datatype: %4.4x Bitlength: %4.4x Obj.access: %4.4x Name: %s\n",
+                    //    j, OElist.DataType[j], OElist.BitLength[j], OElist.ObjAccess[j], OElist.Name[j]);
+
+                    if(printAcyclic && ( ODlist.Index[i] > 0x1FFF))
                     {
-                        printf("          Value :%s\n", SDO2string(cnt, ODlist.Index[i], j, OElist.DataType[j]));
+                        printf("ObjectEntry %s_%s { 0x%4.4x, %2.2x, %4.4x, 0}", ODlist.Name[i], OElist.Name[j],
+                        ODlist.Index[i], j,  OElist.DataType[j]);
+                        printf("\n");
+                    }
+                    else
+                    {
+                        //printf("ObjectEntry %s_%s { 0x%4.4x, %2.2x, %4.4x, 0} // Bitlength: %4.4x Obj.access: %4.4x ", ODlist.Name[i], OElist.Name[j],
+                        //ODlist.Index[i], j,  OElist.DataType[j], OElist.BitLength[j], OElist.ObjAccess[j]);
+                    }
+
+                    
+                
+                    if ((OElist.ObjAccess[j] & 0x0007) && !printAcyclic)
+                    {
+                        printf("  Value :%s\n", SDO2string(cnt, ODlist.Index[i], j, OElist.DataType[j]));
                     }
                 }
+
             }
+
         }
     }
     else
@@ -592,14 +436,16 @@ void followerinfo(char *ifname)
                     ec_slave[cnt].CoEdetails, ec_slave[cnt].FoEdetails, ec_slave[cnt].EoEdetails, ec_slave[cnt].SoEdetails);
             printf(" Ebus current: %d[mA]\n only LRD/LWR:%d\n",
                     ec_slave[cnt].Ebuscurrent, ec_slave[cnt].blockLRW);
-            if ((ec_slave[cnt].mbx_proto & ECT_MBXPROT_COE) && printSDO)
-                    si_sdo(cnt);
-                if(printMAP)
-            {
-                    if (ec_slave[cnt].mbx_proto & ECT_MBXPROT_COE)
-                        si_map_sdo(cnt);
-                    else
-                        si_map_sii(cnt);
+            if ((ec_slave[cnt].mbx_proto & ECT_MBXPROT_COE) && printSDO){
+                    si_sdo(cnt);}
+            if ((ec_slave[cnt].mbx_proto & ECT_MBXPROT_COE) && printAcyclic){
+                    si_sdo(cnt);}
+            
+            if(printMAP){
+                if (ec_slave[cnt].mbx_proto & ECT_MBXPROT_COE){
+                    si_map_sdo(cnt);}
+                else{
+                    si_map_sii(cnt);}
             }
          }
       }
@@ -628,13 +474,19 @@ int main(int argc, char *argv[])
    {
       if ((argc > 2) && (strncmp(argv[2], "-sdo", sizeof("-sdo")) == 0)) printSDO = TRUE;
       if ((argc > 2) && (strncmp(argv[2], "-map", sizeof("-map")) == 0)) printMAP = TRUE;
+      if ((argc > 2) && (strncmp(argv[2], "-cyclic", sizeof("-cyclic")) == 0)) printCyclic = TRUE;
+      if ((argc > 2) && (strncmp(argv[2], "-acyclic", sizeof("-acyclic")) == 0)) printAcyclic = TRUE;
       /* start followerinfo */
       strcpy(ifbuf, argv[1]);
       followerinfo(ifbuf);
    }
    else
    {
-      printf("Usage: followerinfo ifname [options]\nifname = eth0 for example\nOptions :\n -sdo : print SDO info\n -map : print mapping\n");
+      printf("Usage: followerinfo ifname [options]\nifname = eth0 for example\nOptions :\n");
+      printf(" -sdo : print SDO info\n");
+      printf(" -map : print mapping\n");
+      printf(" -cyclic : prints Cyclic Structure\n");
+      printf(" -acyclic : prints Acyclic Structure\n");
 
       printf ("Available adapters\n");
       adapter = ec_find_adapters ();

@@ -81,6 +81,7 @@ list(APPEND SOEM_INCLUDE_DIRS
 
 add_subdirectory(app/followerInfo)
 add_subdirectory(app/createFollowerStruct)
+add_subdirectory(app/eepromtool)
 
 ######### Install Rules #########
 if(CMAKE_SOURCE_DIR STREQUAL CMAKE_CURRENT_SOURCE_DIR)
@@ -88,6 +89,7 @@ if(CMAKE_SOURCE_DIR STREQUAL CMAKE_CURRENT_SOURCE_DIR)
     install(DIRECTORY ${CMAKE_BINARY_DIR}/bin/ DESTINATION bin)
     install(TARGETS followerInfo DESTINATION bin)
     install(TARGETS createFollowerStruct DESTINATION bin)
+    install(TARGETS eepromtool DESTINATION bin)
 endif()
 
 

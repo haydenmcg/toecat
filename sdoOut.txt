@@ -1,0 +1,383 @@
+SOEM (Simple Open EtherCAT Master)
+followerinfo
+Starting followerinfo
+ec_init on ecat0 succeeded.
+1 followers found and configured.
+Calculated workcounter 3
+
+follower:1
+ Name:Tarpon
+ Output size: 208bits
+ Input size: 512bits
+ State: 4
+ Delay: 0[ns]
+ Has DC: 1
+ DCParentport:0
+ Activeports:1.0.0.0
+ Configured address: 1001
+ Man: 00000aa7 ID: 54434200 Rev: 00000017
+ SM0 A:1000 L: 128 F:00010026 Type:1
+ SM1 A:1080 L: 128 F:00010022 Type:2
+ SM2 A:1100 L:  26 F:00010064 Type:3
+ SM3 A:1400 L:  64 F:00010020 Type:4
+ FMMU0 Ls:00000000 Ll:  26 Lsb:0 Leb:7 Ps:1100 Psb:0 Ty:02 Act:01
+ FMMU1 Ls:0000001a Ll:  64 Lsb:0 Leb:7 Ps:1400 Psb:0 Ty:01 Act:01
+ FMMUfunc 0:1 1:2 2:3 3:0
+ MBX length wr: 128 rd: 128 MBX protocols : 04
+ CoE details: 23 FoE details: 00 EoE details: 00 SoE details: 00
+ Ebus current: 0[mA]
+ only LRD/LWR:0
+ CoE Object Description found, 108 entries.
+ObjectEntry Device type_Device type { 0x1000, 00, 0007, 0} // Bitlength: 0020 Obj.access: 0007           Value :0x00020000 131072
+ObjectEntry Error register_Error register { 0x1001, 00, 0005, 0} // Bitlength: 0008 Obj.access: 0007           Value :0x00 0
+ObjectEntry Device name_Device name { 0x1008, 00, 0009, 0} // Bitlength: 0018 Obj.access: 0007           Value :TCB
+ObjectEntry Hardware version_Hardware version { 0x1009, 00, 0009, 0} // Bitlength: 0020 Obj.access: 0007           Value :2032
+ObjectEntry Software version_Software version { 0x100a, 00, 0009, 0} // Bitlength: 0028 Obj.access: 0007           Value :0.1.9
+ObjectEntry Identity_SubIndex 000 { 0x1018, 00, 0005, 0} // Bitlength: 0008 Obj.access: 0007           Value :0x04 4
+ObjectEntry Identity_Vendor ID { 0x1018, 01, 0007, 0} // Bitlength: 0020 Obj.access: 0007           Value :0x00000aa7 2727
+ObjectEntry Identity_Product code { 0x1018, 02, 0007, 0} // Bitlength: 0020 Obj.access: 0007           Value :0x54434200 1413693952
+ObjectEntry Identity_Revision { 0x1018, 03, 0007, 0} // Bitlength: 0020 Obj.access: 0007           Value :0x00000017 23
+ObjectEntry Identity_Serial number { 0x1018, 04, 0007, 0} // Bitlength: 0020 Obj.access: 0007           Value :0x00000001 1
+ObjectEntry Error Settings_SubIndex 000 { 0x10f1, 00, 0005, 0} // Bitlength: 0008 Obj.access: 0007           Value :0x02 2
+ObjectEntry Error Settings_Local Error Reaction { 0x10f1, 01, 0007, 0} // Bitlength: 0020 Obj.access: 003f           Value :0x00000001 1
+ObjectEntry Error Settings_Sync Error Counter Limit { 0x10f1, 02, 0006, 0} // Bitlength: 0010 Obj.access: 003f           Value :0x0004 4
+ObjectEntry Timestamp Object_Timestamp Object { 0x10f8, 00, 001b, 0} // Bitlength: 0040 Obj.access: 00bf           Value :0x098a666499f6ef44 687474475393281860
+ObjectEntry MotorControlrx_SubIndex 000 { 0x1600, 00, 0005, 0} // Bitlength: 0008 Obj.access: 0007           Value :0x06 6
+ObjectEntry MotorControlrx_SubIndex 001 { 0x1600, 01, 0007, 0} // Bitlength: 0020 Obj.access: 0007           Value :0x60400010 1614807056
+ObjectEntry MotorControlrx_SubIndex 002 { 0x1600, 02, 0007, 0} // Bitlength: 0020 Obj.access: 0007           Value :0x607a0020 1618608160
+ObjectEntry MotorControlrx_SubIndex 003 { 0x1600, 03, 0007, 0} // Bitlength: 0020 Obj.access: 0007           Value :0x60b00020 1622147104
+ObjectEntry MotorControlrx_SubIndex 004 { 0x1600, 04, 0007, 0} // Bitlength: 0020 Obj.access: 0007           Value :0x60b10020 1622212640
+ObjectEntry MotorControlrx_SubIndex 005 { 0x1600, 05, 0007, 0} // Bitlength: 0020 Obj.access: 0007           Value :0x60b20020 1622278176
+ObjectEntry MotorControlrx_SubIndex 006 { 0x1600, 06, 0007, 0} // Bitlength: 0020 Obj.access: 0007           Value :0x00000010 16
+ObjectEntry TempControlrx_SubIndex 000 { 0x1610, 00, 0005, 0} // Bitlength: 0008 Obj.access: 0007           Value :0x02 2
+ObjectEntry TempControlrx_SubIndex 001 { 0x1610, 01, 0007, 0} // Bitlength: 0020 Obj.access: 0007           Value :0x68410020 1749090336
+ObjectEntry TempControlrx_SubIndex 002 { 0x1610, 02, 0007, 0} // Bitlength: 0020 Obj.access: 0007           Value :0x68420010 1749155856
+ObjectEntry MotorControltx_SubIndex 000 { 0x1a00, 00, 0005, 0} // Bitlength: 0008 Obj.access: 0007           Value :0x0d 13
+ObjectEntry MotorControltx_SubIndex 001 { 0x1a00, 01, 0007, 0} // Bitlength: 0020 Obj.access: 0007           Value :0x60410010 1614872592
+ObjectEntry MotorControltx_SubIndex 002 { 0x1a00, 02, 0007, 0} // Bitlength: 0020 Obj.access: 0007           Value :0x60640020 1617166368
+ObjectEntry MotorControltx_SubIndex 003 { 0x1a00, 03, 0007, 0} // Bitlength: 0020 Obj.access: 0007           Value :0x606b0020 1617625120
+ObjectEntry MotorControltx_SubIndex 004 { 0x1a00, 04, 0007, 0} // Bitlength: 0020 Obj.access: 0007           Value :0x606c0020 1617690656
+ObjectEntry MotorControltx_SubIndex 005 { 0x1a00, 05, 0007, 0} // Bitlength: 0020 Obj.access: 0007           Value :0x60740010 1618214928
+ObjectEntry MotorControltx_SubIndex 006 { 0x1a00, 06, 0007, 0} // Bitlength: 0020 Obj.access: 0007           Value :0x60780010 1618477072
+ObjectEntry MotorControltx_SubIndex 007 { 0x1a00, 07, 0007, 0} // Bitlength: 0020 Obj.access: 0007           Value :0x60fa0020 1626996768
+ObjectEntry MotorControltx_SubIndex 008 { 0x1a00, 08, 0007, 0} // Bitlength: 0020 Obj.access: 0007           Value :0x60e40020 1625554976
+ObjectEntry MotorControltx_SubIndex 009 { 0x1a00, 09, 0007, 0} // Bitlength: 0020 Obj.access: 0007           Value :0x60e50020 1625620512
+ObjectEntry MotorControltx_SubIndex 010 { 0x1a00, 0a, 0007, 0} // Bitlength: 0020 Obj.access: 0007           Value :0x20000520 536872224
+ObjectEntry MotorControltx_SubIndex 011 { 0x1a00, 0b, 0007, 0} // Bitlength: 0020 Obj.access: 0007           Value :0x20200520 538969376
+ObjectEntry MotorControltx_SubIndex 012 { 0x1a00, 0c, 0007, 0} // Bitlength: 0020 Obj.access: 0007           Value :0x20400520 541066528
+ObjectEntry MotorControltx_SubIndex 013 { 0x1a00, 0d, 0007, 0} // Bitlength: 0020 Obj.access: 0007           Value :0x00000010 16
+ObjectEntry TempControltx_SubIndex 000 { 0x1a10, 00, 0005, 0} // Bitlength: 0008 Obj.access: 0007           Value :0x06 6
+ObjectEntry TempControltx_SubIndex 001 { 0x1a10, 01, 0007, 0} // Bitlength: 0020 Obj.access: 0007           Value :0x68000020 1744830496
+ObjectEntry TempControltx_SubIndex 002 { 0x1a10, 02, 0007, 0} // Bitlength: 0020 Obj.access: 0007           Value :0x68010020 1744896032
+ObjectEntry TempControltx_SubIndex 003 { 0x1a10, 03, 0007, 0} // Bitlength: 0020 Obj.access: 0007           Value :0x68020010 1744961552
+ObjectEntry TempControltx_SubIndex 004 { 0x1a10, 04, 0007, 0} // Bitlength: 0020 Obj.access: 0007           Value :0x68030020 1745027104
+ObjectEntry TempControltx_SubIndex 005 { 0x1a10, 05, 0007, 0} // Bitlength: 0020 Obj.access: 0007           Value :0x68200010 1746927632
+ObjectEntry TempControltx_SubIndex 006 { 0x1a10, 06, 0007, 0} // Bitlength: 0020 Obj.access: 0007           Value :0x68210010 1746993168
+ObjectEntry binaryInputs_SubIndex 000 { 0x1a20, 00, 0005, 0} // Bitlength: 0008 Obj.access: 0007           Value :0x09 9
+ObjectEntry binaryInputs_SubIndex 001 { 0x1a20, 01, 0007, 0} // Bitlength: 0020 Obj.access: 0007           Value :0x70040101 1879310593
+ObjectEntry binaryInputs_SubIndex 002 { 0x1a20, 02, 0007, 0} // Bitlength: 0020 Obj.access: 0007           Value :0x70040201 1879310849
+ObjectEntry binaryInputs_SubIndex 003 { 0x1a20, 03, 0007, 0} // Bitlength: 0020 Obj.access: 0007           Value :0x70040301 1879311105
+ObjectEntry binaryInputs_SubIndex 004 { 0x1a20, 04, 0007, 0} // Bitlength: 0020 Obj.access: 0007           Value :0x70040401 1879311361
+ObjectEntry binaryInputs_SubIndex 005 { 0x1a20, 05, 0007, 0} // Bitlength: 0020 Obj.access: 0007           Value :0x70040501 1879311617
+ObjectEntry binaryInputs_SubIndex 006 { 0x1a20, 06, 0007, 0} // Bitlength: 0020 Obj.access: 0007           Value :0x70040601 1879311873
+ObjectEntry binaryInputs_SubIndex 007 { 0x1a20, 07, 0007, 0} // Bitlength: 0020 Obj.access: 0007           Value :0x70040701 1879312129
+ObjectEntry binaryInputs_SubIndex 008 { 0x1a20, 08, 0007, 0} // Bitlength: 0020 Obj.access: 0007           Value :0x70040801 1879312385
+ObjectEntry binaryInputs_SubIndex 009 { 0x1a20, 09, 0007, 0} // Bitlength: 0020 Obj.access: 0007           Value :0x00000008 8
+ObjectEntry Sync manager type_SubIndex 000 { 0x1c00, 00, 0005, 0} // Bitlength: 0008 Obj.access: 0007           Value :0x04 4
+ObjectEntry Sync manager type_SubIndex 001 { 0x1c00, 01, 0005, 0} // Bitlength: 0008 Obj.access: 0007           Value :0x01 1
+ObjectEntry Sync manager type_SubIndex 002 { 0x1c00, 02, 0005, 0} // Bitlength: 0008 Obj.access: 0007           Value :0x02 2
+ObjectEntry Sync manager type_SubIndex 003 { 0x1c00, 03, 0005, 0} // Bitlength: 0008 Obj.access: 0007           Value :0x03 3
+ObjectEntry Sync manager type_SubIndex 004 { 0x1c00, 04, 0005, 0} // Bitlength: 0008 Obj.access: 0007           Value :0x04 4
+ObjectEntry SM2 assignment_SubIndex 000 { 0x1c12, 00, 0005, 0} // Bitlength: 0008 Obj.access: 0007           Value :0x02 2
+ObjectEntry SM2 assignment_SubIndex 001 { 0x1c12, 01, 0006, 0} // Bitlength: 0010 Obj.access: 0007           Value :0x1600 5632
+ObjectEntry SM2 assignment_SubIndex 002 { 0x1c12, 02, 0006, 0} // Bitlength: 0010 Obj.access: 0007           Value :0x1610 5648
+ObjectEntry SM3 assignment_SubIndex 000 { 0x1c13, 00, 0005, 0} // Bitlength: 0008 Obj.access: 0007           Value :0x03 3
+ObjectEntry SM3 assignment_SubIndex 001 { 0x1c13, 01, 0006, 0} // Bitlength: 0010 Obj.access: 0007           Value :0x1a00 6656
+ObjectEntry SM3 assignment_SubIndex 002 { 0x1c13, 02, 0006, 0} // Bitlength: 0010 Obj.access: 0007           Value :0x1a10 6672
+ObjectEntry SM3 assignment_SubIndex 003 { 0x1c13, 03, 0006, 0} // Bitlength: 0010 Obj.access: 0007           Value :0x1a20 6688
+ObjectEntry SM output parameter_SubIndex 000 { 0x1c32, 00, 0005, 0} // Bitlength: 0008 Obj.access: 0007           Value :0x20 32
+ObjectEntry SM output parameter_Synchronization Type { 0x1c32, 01, 0006, 0} // Bitlength: 0010 Obj.access: 000f           Value :0x0001 1
+ObjectEntry SM output parameter_Cycle Time { 0x1c32, 02, 0007, 0} // Bitlength: 0020 Obj.access: 0007           Value :0x00000000 0
+ObjectEntry SM output parameter_Synchronization Types supported { 0x1c32, 04, 0006, 0} // Bitlength: 0010 Obj.access: 0007           Value :0x401f 16415
+ObjectEntry SM output parameter_Minimum Cycle Time { 0x1c32, 05, 0007, 0} // Bitlength: 0020 Obj.access: 0007           Value :0x000186a0 100000
+ObjectEntry SM output parameter_Calc and Copy Time { 0x1c32, 06, 0007, 0} // Bitlength: 0020 Obj.access: 0007           Value :0x00000000 0
+ObjectEntry SM output parameter_Get Cycle Time { 0x1c32, 08, 0006, 0} // Bitlength: 0010 Obj.access: 003f           Value :0x0000 0
+ObjectEntry SM output parameter_Delay Time { 0x1c32, 09, 0007, 0} // Bitlength: 0020 Obj.access: 0007           Value :0x00000000 0
+ObjectEntry SM output parameter_Sync0 Cycle Time { 0x1c32, 0a, 0007, 0} // Bitlength: 0020 Obj.access: 003f           Value :0x00000000 0
+ObjectEntry SM output parameter_SM-Event Missed { 0x1c32, 0b, 0006, 0} // Bitlength: 0010 Obj.access: 0007           Value :0x0000 0
+ObjectEntry SM output parameter_Cycle Time Too Small { 0x1c32, 0c, 0006, 0} // Bitlength: 0010 Obj.access: 0007           Value :0x0000 0
+ObjectEntry SM output parameter_Sync Error { 0x1c32, 20, 0001, 0} // Bitlength: 0001 Obj.access: 0007           Value :FALSE
+ObjectEntry SM input parameter_SubIndex 000 { 0x1c33, 00, 0005, 0} // Bitlength: 0008 Obj.access: 0007           Value :0x20 32
+ObjectEntry SM input parameter_Synchronization Type { 0x1c33, 01, 0006, 0} // Bitlength: 0010 Obj.access: 000f           Value :0x0022 34
+ObjectEntry SM input parameter_Cycle Time { 0x1c33, 02, 0007, 0} // Bitlength: 0020 Obj.access: 0007           Value :0x00000000 0
+ObjectEntry SM input parameter_Synchronization Types supported { 0x1c33, 04, 0006, 0} // Bitlength: 0010 Obj.access: 0007           Value :0x401f 16415
+ObjectEntry SM input parameter_Minimum Cycle Time { 0x1c33, 05, 0007, 0} // Bitlength: 0020 Obj.access: 0007           Value :0x000186a0 100000
+ObjectEntry SM input parameter_Calc and Copy Time { 0x1c33, 06, 0007, 0} // Bitlength: 0020 Obj.access: 0007           Value :0x00000000 0
+ObjectEntry SM input parameter_Get Cycle Time { 0x1c33, 08, 0006, 0} // Bitlength: 0010 Obj.access: 003f           Value :0x0000 0
+ObjectEntry SM input parameter_Delay Time { 0x1c33, 09, 0007, 0} // Bitlength: 0020 Obj.access: 0007           Value :0x00000000 0
+ObjectEntry SM input parameter_Sync0 Cycle Time { 0x1c33, 0a, 0007, 0} // Bitlength: 0020 Obj.access: 003f           Value :0x00000000 0
+ObjectEntry SM input parameter_SM-Event Missed { 0x1c33, 0b, 0006, 0} // Bitlength: 0010 Obj.access: 0007           Value :0x0000 0
+ObjectEntry SM input parameter_Cycle Time Too Small { 0x1c33, 0c, 0006, 0} // Bitlength: 0010 Obj.access: 0007           Value :0x0000 0
+ObjectEntry SM input parameter_Sync Error { 0x1c33, 20, 0001, 0} // Bitlength: 0001 Obj.access: 0007           Value :FALSE
+ObjectEntry PositionControlParameters_SubIndex 000 { 0x2000, 00, 0005, 0} // Bitlength: 0008 Obj.access: 0007           Value :0x05 5
+ObjectEntry PositionControlParameters_Kp { 0x2000, 01, 0008, 0} // Bitlength: 0020 Obj.access: 003f           Value :0.000000
+ObjectEntry PositionControlParameters_Ki { 0x2000, 02, 0008, 0} // Bitlength: 0020 Obj.access: 003f           Value :0.000000
+ObjectEntry PositionControlParameters_MaxIntegralContribution { 0x2000, 03, 0008, 0} // Bitlength: 0020 Obj.access: 003f           Value :0.000000
+ObjectEntry PositionControlParameters_Period { 0x2000, 04, 0008, 0} // Bitlength: 0020 Obj.access: 003f           Value :0.000000
+ObjectEntry PositionControlParameters_PositionFollowingError { 0x2000, 05, 0008, 0} // Bitlength: 0020 Obj.access: 0007           Value :0.000000
+ObjectEntry PositionFollowingErrorParameters_SubIndex 000 { 0x2010, 00, 0005, 0} // Bitlength: 0008 Obj.access: 0007           Value :0x02 2
+ObjectEntry PositionFollowingErrorParameters_FollowingErrorWindow { 0x2010, 01, 0008, 0} // Bitlength: 0020 Obj.access: 003f           Value :1000000.000000
+ObjectEntry PositionFollowingErrorParameters_FollowingErrorTimeOut { 0x2010, 02, 0008, 0} // Bitlength: 0020 Obj.access: 003f           Value :100000.000000
+ObjectEntry VelocityControlParameters_SubIndex 000 { 0x2020, 00, 0005, 0} // Bitlength: 0008 Obj.access: 0007           Value :0x05 5
+ObjectEntry VelocityControlParameters_Kp { 0x2020, 01, 0008, 0} // Bitlength: 0020 Obj.access: 003f           Value :0.000000
+ObjectEntry VelocityControlParameters_Ki { 0x2020, 02, 0008, 0} // Bitlength: 0020 Obj.access: 003f           Value :0.000000
+ObjectEntry VelocityControlParameters_MaxIntegralContribution { 0x2020, 03, 0008, 0} // Bitlength: 0020 Obj.access: 003f           Value :0.000000
+ObjectEntry VelocityControlParameters_Period { 0x2020, 04, 0008, 0} // Bitlength: 0020 Obj.access: 003f           Value :0.000000
+ObjectEntry VelocityControlParameters_VelocityFollowingError { 0x2020, 05, 0008, 0} // Bitlength: 0020 Obj.access: 0007           Value :0.000000
+ObjectEntry VelocityFollowingErrorParameters_SubIndex 000 { 0x2030, 00, 0005, 0} // Bitlength: 0008 Obj.access: 0007           Value :0x02 2
+ObjectEntry VelocityFollowingErrorParameters_FollowingErrorWindow { 0x2030, 01, 0008, 0} // Bitlength: 0020 Obj.access: 003f           Value :1000000.000000
+ObjectEntry VelocityFollowingErrorParameters_FollowingErrorTimeOut { 0x2030, 02, 0008, 0} // Bitlength: 0020 Obj.access: 003f           Value :10000.000000
+ObjectEntry CurrentControlParameters_SubIndex 000 { 0x2040, 00, 0005, 0} // Bitlength: 0008 Obj.access: 0007           Value :0x05 5
+ObjectEntry CurrentControlParameters_Kp { 0x2040, 01, 0008, 0} // Bitlength: 0020 Obj.access: 003f           Value :0.000000
+ObjectEntry CurrentControlParameters_Ki { 0x2040, 02, 0008, 0} // Bitlength: 0020 Obj.access: 003f           Value :0.000000
+ObjectEntry CurrentControlParameters_MaxIntegralContribution { 0x2040, 03, 0008, 0} // Bitlength: 0020 Obj.access: 003f           Value :0.000000
+ObjectEntry CurrentControlParameters_Period { 0x2040, 04, 0008, 0} // Bitlength: 0020 Obj.access: 003f           Value :0.000000
+ObjectEntry CurrentControlParameters_CurrentFollowingError { 0x2040, 05, 0008, 0} // Bitlength: 0020 Obj.access: 0007           Value :0.000000
+ObjectEntry CurrentFollowingErrorParameters_SubIndex 000 { 0x2050, 00, 0005, 0} // Bitlength: 0008 Obj.access: 0007           Value :0x02 2
+ObjectEntry CurrentFollowingErrorParameters_FollowingErrorWindow { 0x2050, 01, 0008, 0} // Bitlength: 0020 Obj.access: 003f           Value :0.000000
+ObjectEntry CurrentFollowingErrorParameters_FollowingErrorTimeOut { 0x2050, 02, 0008, 0} // Bitlength: 0020 Obj.access: 003f           Value :0.000000
+ObjectEntry I2TParameters_SubIndex 000 { 0x2060, 00, 0005, 0} // Bitlength: 0008 Obj.access: 0007           Value :0x03 3
+ObjectEntry I2TParameters_MotorCurrentContinuousLimit { 0x2060, 01, 0008, 0} // Bitlength: 0020 Obj.access: 003f           Value :275.000000
+ObjectEntry I2TParameters_MotorCurrentPeakLimit { 0x2060, 02, 0008, 0} // Bitlength: 0020 Obj.access: 003f           Value :400.000000
+ObjectEntry I2TParameters_MotorCurrentPeakDurationLimit { 0x2060, 03, 0008, 0} // Bitlength: 0020 Obj.access: 003f           Value :0.000000
+ObjectEntry motorAccelerationFeedForward _motorAccelerationFeedForward  { 0x2062, 00, 0008, 0} // Bitlength: 0020 Obj.access: 003f           Value :0.000000
+ObjectEntry EncoderPolarity_SubIndex 000 { 0x2064, 00, 0005, 0} // Bitlength: 0008 Obj.access: 0007           Value :0x02 2
+ObjectEntry EncoderPolarity_MotorInverse { 0x2064, 01, 0001, 0} // Bitlength: 0001 Obj.access: 003f           Value :FALSE
+ObjectEntry EncoderPolarity_FilamentInverse { 0x2064, 02, 0001, 0} // Bitlength: 0001 Obj.access: 003f           Value :FALSE
+ObjectEntry MotorPwmPolarity_SubIndex 000 { 0x2066, 00, 0005, 0} // Bitlength: 0008 Obj.access: 0007           Value :0x01 1
+ObjectEntry MotorPwmPolarity_MotorInverse { 0x2066, 01, 0001, 0} // Bitlength: 0001 Obj.access: 003f           Value :FALSE
+ObjectEntry temperatureControlParameters_SubIndex 000 { 0x2200, 00, 0005, 0} // Bitlength: 0008 Obj.access: 0007           Value :0x09 9
+ObjectEntry temperatureControlParameters_Kp { 0x2200, 01, 0008, 0} // Bitlength: 0020 Obj.access: 003f           Value :1.500000
+ObjectEntry temperatureControlParameters_Ki { 0x2200, 02, 0008, 0} // Bitlength: 0020 Obj.access: 003f           Value :0.010000
+ObjectEntry temperatureControlParameters_MaxIntegralContribution { 0x2200, 03, 0008, 0} // Bitlength: 0020 Obj.access: 003f           Value :99.000000
+ObjectEntry temperatureControlParameters_servoPeriod { 0x2200, 04, 0008, 0} // Bitlength: 0020 Obj.access: 003f           Value :1.000000
+ObjectEntry temperatureControlParameters_pwmPeriod { 0x2200, 05, 0008, 0} // Bitlength: 0020 Obj.access: 003f           Value :10.000000
+ObjectEntry temperatureControlParameters_feedbackRatio { 0x2200, 06, 0008, 0} // Bitlength: 0020 Obj.access: 003f           Value :1.000000
+ObjectEntry temperatureControlParameters_minOnTime { 0x2200, 07, 0008, 0} // Bitlength: 0020 Obj.access: 003f           Value :0.010000
+ObjectEntry temperatureControlParameters_avgFeedBackBuffer { 0x2200, 08, 0008, 0} // Bitlength: 0020 Obj.access: 003f           Value :5.000000
+ObjectEntry temperatureControlParameters_ambientTemperatureFF { 0x2200, 09, 0008, 0} // Bitlength: 0020 Obj.access: 003f           Value :0.000000
+ObjectEntry temperatureControlFeedBack_SubIndex 000 { 0x2210, 00, 0005, 0} // Bitlength: 0008 Obj.access: 0007           Value :0x04 4
+ObjectEntry temperatureControlFeedBack_followingError { 0x2210, 01, 0008, 0} // Bitlength: 0020 Obj.access: 0007           Value :-6270.524414
+ObjectEntry temperatureControlFeedBack_controlEffort { 0x2210, 02, 0008, 0} // Bitlength: 0020 Obj.access: 0007           Value :0.000000
+ObjectEntry temperatureControlFeedBack_integralContribution { 0x2210, 03, 0008, 0} // Bitlength: 0020 Obj.access: 0007           Value :-99.000000
+ObjectEntry temperatureControlFeedBack_ambientTemperatureError { 0x2210, 04, 0008, 0} // Bitlength: 0020 Obj.access: 003f           Value :0.000000
+ObjectEntry temperatureStatusParameters_SubIndex 000 { 0x2220, 00, 0005, 0} // Bitlength: 0008 Obj.access: 0007           Value :0x06 6
+ObjectEntry temperatureStatusParameters_WarningError { 0x2220, 01, 0008, 0} // Bitlength: 0020 Obj.access: 003f           Value :0.000000
+ObjectEntry temperatureStatusParameters_WarningTime { 0x2220, 02, 0008, 0} // Bitlength: 0020 Obj.access: 003f           Value :0.000000
+ObjectEntry temperatureStatusParameters_FaultError { 0x2220, 03, 0008, 0} // Bitlength: 0020 Obj.access: 003f           Value :0.000000
+ObjectEntry temperatureStatusParameters_FaultTime { 0x2220, 04, 0008, 0} // Bitlength: 0020 Obj.access: 003f           Value :0.000000
+ObjectEntry temperatureStatusParameters_underTemp { 0x2220, 05, 0008, 0} // Bitlength: 0020 Obj.access: 003f           Value :0.000000
+ObjectEntry temperatureStatusParameters_underTempTime { 0x2220, 06, 0008, 0} // Bitlength: 0020 Obj.access: 003f           Value :0.000000
+ObjectEntry blowerStatusParameters_SubIndex 000 { 0x2250, 00, 0005, 0} // Bitlength: 0008 Obj.access: 0007           Value :0x08 8
+ObjectEntry blowerStatusParameters_warningError { 0x2250, 01, 0008, 0} // Bitlength: 0020 Obj.access: 003f           Value :0.000000
+ObjectEntry blowerStatusParameters_warningTime { 0x2250, 02, 0008, 0} // Bitlength: 0020 Obj.access: 003f           Value :0.000000
+ObjectEntry blowerStatusParameters_FaultError { 0x2250, 03, 0008, 0} // Bitlength: 0020 Obj.access: 003f           Value :0.000000
+ObjectEntry blowerStatusParameters_FaultTime { 0x2250, 04, 0008, 0} // Bitlength: 0020 Obj.access: 003f           Value :0.000000
+ObjectEntry blowerStatusParameters_UnderSpeed { 0x2250, 05, 0008, 0} // Bitlength: 0020 Obj.access: 003f           Value :0.000000
+ObjectEntry blowerStatusParameters_UnderTime { 0x2250, 06, 0008, 0} // Bitlength: 0020 Obj.access: 003f           Value :0.000000
+ObjectEntry blowerStatusParameters_OverSpeed { 0x2250, 07, 0008, 0} // Bitlength: 0020 Obj.access: 003f           Value :0.000000
+ObjectEntry blowerStatusParameters_OverTime { 0x2250, 08, 0008, 0} // Bitlength: 0020 Obj.access: 003f           Value :0.000000
+ObjectEntry blowerStatusBits_SubIndex 000 { 0x2400, 00, 0005, 0} // Bitlength: 0008 Obj.access: 0007           Value :0x06 6
+ObjectEntry blowerStatusBits_motorEnabled { 0x2400, 01, 0001, 0} // Bitlength: 0001 Obj.access: 0087           Value :FALSE
+ObjectEntry blowerStatusBits_hardwareFault { 0x2400, 02, 0001, 0} // Bitlength: 0001 Obj.access: 0087           Value :FALSE
+ObjectEntry blowerStatusBits_swWarning { 0x2400, 03, 0001, 0} // Bitlength: 0001 Obj.access: 0087           Value :FALSE
+ObjectEntry blowerStatusBits_swFault { 0x2400, 04, 0001, 0} // Bitlength: 0001 Obj.access: 0087           Value :FALSE
+ObjectEntry blowerStatusBits_underSpeed { 0x2400, 05, 0001, 0} // Bitlength: 0001 Obj.access: 0087           Value :FALSE
+ObjectEntry blowerStatusBits_overSpeed { 0x2400, 06, 0001, 0} // Bitlength: 0001 Obj.access: 0087           Value :FALSE
+ObjectEntry blowerGeneral_SubIndex 000 { 0x2402, 00, 0005, 0} // Bitlength: 0008 Obj.access: 0007           Value :0x04 4
+ObjectEntry blowerGeneral_Blower_Motor_Brake { 0x2402, 01, 0001, 0} // Bitlength: 0001 Obj.access: 007f           Value :FALSE
+ObjectEntry blowerGeneral_Blower_Motor_Direction { 0x2402, 02, 0001, 0} // Bitlength: 0001 Obj.access: 007f           Value :FALSE
+ObjectEntry blowerGeneral_blowerCurrent { 0x2402, 04, 0008, 0} // Bitlength: 0020 Obj.access: 0087           Value :2.395239
+ObjectEntry thermalCutOff_SubIndex 000 { 0x2410, 00, 0005, 0} // Bitlength: 0008 Obj.access: 0007           Value :0x02 2
+ObjectEntry thermalCutOff_cutOff0 { 0x2410, 01, 0001, 0} // Bitlength: 0001 Obj.access: 0087           Value :FALSE
+ObjectEntry thermalCutOff_cutOff1 { 0x2410, 02, 0001, 0} // Bitlength: 0001 Obj.access: 0087           Value :FALSE
+ObjectEntry tcbVoltages_SubIndex 000 { 0x2412, 00, 0005, 0} // Bitlength: 0008 Obj.access: 0007           Value :0x02 2
+ObjectEntry tcbVoltages_primary24v { 0x2412, 01, 0008, 0} // Bitlength: 0020 Obj.access: 0087           Value :24.178059
+ObjectEntry tcbVoltages_logic24v { 0x2412, 02, 0008, 0} // Bitlength: 0020 Obj.access: 0087           Value :24.145508
+ObjectEntry tcbCurrents_SubIndex 000 { 0x2414, 00, 0005, 0} // Bitlength: 0008 Obj.access: 0007           Value :0x02 2
+ObjectEntry tcbCurrents_primary24v { 0x2414, 01, 0008, 0} // Bitlength: 0020 Obj.access: 0087           Value :0.040283
+ObjectEntry tcbCurrents_logic24v { 0x2414, 02, 0008, 0} // Bitlength: 0020 Obj.access: 0087           Value :0.000000
+ObjectEntry tcbVersion_SubIndex 000 { 0x2416, 00, 0005, 0} // Bitlength: 0008 Obj.access: 0007           Value :0x02 2
+ObjectEntry tcbVersion_value0 { 0x2416, 01, 0008, 0} // Bitlength: 0020 Obj.access: 0087           Value :0.074121
+ObjectEntry tcbVersion_value1 { 0x2416, 02, 0008, 0} // Bitlength: 0020 Obj.access: 0087           Value :0.402832
+ObjectEntry tcbOperationalInputs_SubIndex 000 { 0x2418, 00, 0005, 0} // Bitlength: 0008 Obj.access: 0007           Value :0x08 8
+ObjectEntry tcbOperationalInputs_Power_Status { 0x2418, 01, 0001, 0} // Bitlength: 0001 Obj.access: 0087           Value :FALSE
+ObjectEntry tcbOperationalInputs_Voltage_Supervisor { 0x2418, 02, 0001, 0} // Bitlength: 0001 Obj.access: 0087           Value :FALSE
+ObjectEntry tcbOperationalInputs_Fault_24v { 0x2418, 03, 0001, 0} // Bitlength: 0001 Obj.access: 0087           Value :FALSE
+ObjectEntry tcbOperationalInputs_Oven_Light_Fault { 0x2418, 04, 0001, 0} // Bitlength: 0001 Obj.access: 0087           Value :FALSE
+ObjectEntry tcbOperationalInputs_Aux_Fan_Fault { 0x2418, 05, 0001, 0} // Bitlength: 0001 Obj.access: 0087           Value :FALSE
+ObjectEntry tcbOperationalInputs_Oven_Light_Disconnect { 0x2418, 06, 0001, 0} // Bitlength: 0001 Obj.access: 0087           Value :FALSE
+ObjectEntry tcbOperationalInputs_Oven_Light_Current { 0x2418, 08, 0008, 0} // Bitlength: 0020 Obj.access: 0087           Value :0.000000
+ObjectEntry FanActualRPM_SubIndex 000 { 0x2420, 00, 0005, 0} // Bitlength: 0008 Obj.access: 0007           Value :0x04 4
+ObjectEntry FanActualRPM_Fan1 { 0x2420, 01, 0006, 0} // Bitlength: 0010 Obj.access: 0087           Value :0x000f 15
+ObjectEntry FanActualRPM_Fan2 { 0x2420, 02, 0006, 0} // Bitlength: 0010 Obj.access: 0087           Value :0x000f 15
+ObjectEntry FanActualRPM_Fan3 { 0x2420, 03, 0006, 0} // Bitlength: 0010 Obj.access: 0087           Value :0x000f 15
+ObjectEntry FanActualRPM_Fan4 { 0x2420, 04, 0006, 0} // Bitlength: 0010 Obj.access: 0087           Value :0x000f 15
+ObjectEntry acVRMS_SubIndex 000 { 0x2430, 00, 0005, 0} // Bitlength: 0008 Obj.access: 0007           Value :0x03 3
+ObjectEntry acVRMS_PhA { 0x2430, 01, 0008, 0} // Bitlength: 0020 Obj.access: 0087           Value :0.000000
+ObjectEntry acVRMS_PhB { 0x2430, 02, 0008, 0} // Bitlength: 0020 Obj.access: 0087           Value :0.000000
+ObjectEntry acVRMS_PhC { 0x2430, 03, 0008, 0} // Bitlength: 0020 Obj.access: 0087           Value :0.000000
+ObjectEntry acIRMS_SubIndex 000 { 0x2440, 00, 0005, 0} // Bitlength: 0008 Obj.access: 0007           Value :0x03 3
+ObjectEntry acIRMS_PhA { 0x2440, 01, 0008, 0} // Bitlength: 0020 Obj.access: 0087           Value :0.000000
+ObjectEntry acIRMS_PhB { 0x2440, 02, 0008, 0} // Bitlength: 0020 Obj.access: 0087           Value :0.000000
+ObjectEntry acIRMS_PhC { 0x2440, 03, 0008, 0} // Bitlength: 0020 Obj.access: 0087           Value :0.000000
+ObjectEntry tcbDigitalOuts_SubIndex 000 { 0x2600, 00, 0005, 0} // Bitlength: 0008 Obj.access: 0007           Value :0x0a 10
+ObjectEntry tcbDigitalOuts_EC_ERROR_LED { 0x2600, 01, 0001, 0} // Bitlength: 0001 Obj.access: 007f           Value :FALSE
+ObjectEntry tcbDigitalOuts_SAME54_Status_LED { 0x2600, 02, 0001, 0} // Bitlength: 0001 Obj.access: 007f           Value :FALSE
+ObjectEntry tcbDigitalOuts_SAME54_Blink_LED { 0x2600, 03, 0001, 0} // Bitlength: 0001 Obj.access: 007f           Value :FALSE
+ObjectEntry tcbDigitalOuts_SAME54_ERR_LED { 0x2600, 04, 0001, 0} // Bitlength: 0001 Obj.access: 007f           Value :FALSE
+ObjectEntry tcbDigitalOuts_LAN9252_Reset { 0x2600, 05, 0001, 0} // Bitlength: 0001 Obj.access: 007f           Value :FALSE
+ObjectEntry tcbDigitalOuts_Heater_SSR_A { 0x2600, 06, 0001, 0} // Bitlength: 0001 Obj.access: 007f           Value :FALSE
+ObjectEntry tcbDigitalOuts_Heater_SSR_B { 0x2600, 07, 0001, 0} // Bitlength: 0001 Obj.access: 007f           Value :FALSE
+ObjectEntry tcbDigitalOuts_Heater_SSR_C { 0x2600, 08, 0001, 0} // Bitlength: 0001 Obj.access: 007f           Value :FALSE
+ObjectEntry tcbDigitalOuts_Oven_Light_FET { 0x2600, 09, 0001, 0} // Bitlength: 0001 Obj.access: 007f           Value :FALSE
+ObjectEntry tcbDigitalOuts_Oven_Light_Enable { 0x2600, 0a, 0001, 0} // Bitlength: 0001 Obj.access: 007f           Value :FALSE
+ObjectEntry FanTargetRPM_SubIndex 000 { 0x2610, 00, 0005, 0} // Bitlength: 0008 Obj.access: 0007           Value :0x04 4
+ObjectEntry FanTargetRPM_Fan1 { 0x2610, 01, 0006, 0} // Bitlength: 0010 Obj.access: 007f           Value :0x1388 5000
+ObjectEntry FanTargetRPM_Fan2 { 0x2610, 02, 0006, 0} // Bitlength: 0010 Obj.access: 007f           Value :0x1388 5000
+ObjectEntry FanTargetRPM_Fan3 { 0x2610, 03, 0006, 0} // Bitlength: 0010 Obj.access: 007f           Value :0x0000 0
+ObjectEntry FanTargetRPM_Fan4 { 0x2610, 04, 0006, 0} // Bitlength: 0010 Obj.access: 007f           Value :0x0000 0
+ObjectEntry Fan1Parameters_SubIndex 000 { 0x2800, 00, 0005, 0} // Bitlength: 0008 Obj.access: 003f           Value :0x0c 12
+ObjectEntry Fan1Parameters_rpmControl { 0x2800, 01, 0001, 0} // Bitlength: 0001 Obj.access: 003f           Value :TRUE
+ObjectEntry Fan1Parameters_poles { 0x2800, 03, 0005, 0} // Bitlength: 0008 Obj.access: 003f           Value :0x01 1
+ObjectEntry Fan1Parameters_edges { 0x2800, 04, 0005, 0} // Bitlength: 0008 Obj.access: 003f           Value :0x05 5
+ObjectEntry Fan1Parameters_minRPM { 0x2800, 05, 0005, 0} // Bitlength: 0008 Obj.access: 003f           Value :0x05 5
+ObjectEntry Fan1Parameters_maxRPM { 0x2800, 06, 0006, 0} // Bitlength: 0010 Obj.access: 003f           Value :0x0005 5
+ObjectEntry Fan1Parameters_kpGain { 0x2800, 07, 0005, 0} // Bitlength: 0008 Obj.access: 003f           Value :0x04 4
+ObjectEntry Fan1Parameters_kiGain { 0x2800, 08, 0005, 0} // Bitlength: 0008 Obj.access: 003f           Value :0x04 4
+ObjectEntry Fan1Parameters_kdGain { 0x2800, 09, 0005, 0} // Bitlength: 0008 Obj.access: 003f           Value :0x04 4
+ObjectEntry Fan1Parameters_maxStepSize { 0x2800, 0a, 0005, 0} // Bitlength: 0008 Obj.access: 003f           Value :0x00 0
+ObjectEntry Fan1Parameters_updateTime { 0x2800, 0b, 0006, 0} // Bitlength: 0010 Obj.access: 003f           Value :0x0190 400
+ObjectEntry Fan1Parameters_errorWindow { 0x2800, 0c, 0005, 0} // Bitlength: 0008 Obj.access: 003f           Value :0x00 0
+ObjectEntry Fan2Parameters_SubIndex 000 { 0x2801, 00, 0005, 0} // Bitlength: 0008 Obj.access: 003f           Value :0x0c 12
+ObjectEntry Fan2Parameters_rpmControl { 0x2801, 01, 0001, 0} // Bitlength: 0001 Obj.access: 003f           Value :TRUE
+ObjectEntry Fan2Parameters_poles { 0x2801, 03, 0005, 0} // Bitlength: 0008 Obj.access: 003f           Value :0x01 1
+ObjectEntry Fan2Parameters_edges { 0x2801, 04, 0005, 0} // Bitlength: 0008 Obj.access: 003f           Value :0x05 5
+ObjectEntry Fan2Parameters_minRPM { 0x2801, 05, 0005, 0} // Bitlength: 0008 Obj.access: 003f           Value :0x05 5
+ObjectEntry Fan2Parameters_maxRPM { 0x2801, 06, 0006, 0} // Bitlength: 0010 Obj.access: 003f           Value :0x0005 5
+ObjectEntry Fan2Parameters_kpGain { 0x2801, 07, 0005, 0} // Bitlength: 0008 Obj.access: 003f           Value :0x04 4
+ObjectEntry Fan2Parameters_kiGain { 0x2801, 08, 0005, 0} // Bitlength: 0008 Obj.access: 003f           Value :0x04 4
+ObjectEntry Fan2Parameters_kdGain { 0x2801, 09, 0005, 0} // Bitlength: 0008 Obj.access: 003f           Value :0x04 4
+ObjectEntry Fan2Parameters_maxStepSize { 0x2801, 0a, 0005, 0} // Bitlength: 0008 Obj.access: 003f           Value :0x00 0
+ObjectEntry Fan2Parameters_updateTime { 0x2801, 0b, 0006, 0} // Bitlength: 0010 Obj.access: 003f           Value :0x0190 400
+ObjectEntry Fan2Parameters_errorWindow { 0x2801, 0c, 0005, 0} // Bitlength: 0008 Obj.access: 003f           Value :0x00 0
+ObjectEntry Fan3Parameters_SubIndex 000 { 0x2802, 00, 0005, 0} // Bitlength: 0008 Obj.access: 003f           Value :0x0c 12
+ObjectEntry Fan3Parameters_rpmControl { 0x2802, 01, 0001, 0} // Bitlength: 0001 Obj.access: 003f           Value :TRUE
+ObjectEntry Fan3Parameters_poles { 0x2802, 03, 0005, 0} // Bitlength: 0008 Obj.access: 003f           Value :0x01 1
+ObjectEntry Fan3Parameters_edges { 0x2802, 04, 0005, 0} // Bitlength: 0008 Obj.access: 003f           Value :0x05 5
+ObjectEntry Fan3Parameters_minRPM { 0x2802, 05, 0005, 0} // Bitlength: 0008 Obj.access: 003f           Value :0x05 5
+ObjectEntry Fan3Parameters_maxRPM { 0x2802, 06, 0006, 0} // Bitlength: 0010 Obj.access: 003f           Value :0x0005 5
+ObjectEntry Fan3Parameters_kpGain { 0x2802, 07, 0005, 0} // Bitlength: 0008 Obj.access: 003f           Value :0x04 4
+ObjectEntry Fan3Parameters_kiGain { 0x2802, 08, 0005, 0} // Bitlength: 0008 Obj.access: 003f           Value :0x04 4
+ObjectEntry Fan3Parameters_kdGain { 0x2802, 09, 0005, 0} // Bitlength: 0008 Obj.access: 003f           Value :0x04 4
+ObjectEntry Fan3Parameters_maxStepSize { 0x2802, 0a, 0005, 0} // Bitlength: 0008 Obj.access: 003f           Value :0x00 0
+ObjectEntry Fan3Parameters_updateTime { 0x2802, 0b, 0006, 0} // Bitlength: 0010 Obj.access: 003f           Value :0x0190 400
+ObjectEntry Fan3Parameters_errorWindow { 0x2802, 0c, 0005, 0} // Bitlength: 0008 Obj.access: 003f           Value :0x00 0
+ObjectEntry Fan4Parameters_SubIndex 000 { 0x2803, 00, 0005, 0} // Bitlength: 0008 Obj.access: 003f           Value :0x0c 12
+ObjectEntry Fan4Parameters_rpmControl { 0x2803, 01, 0001, 0} // Bitlength: 0001 Obj.access: 003f           Value :TRUE
+ObjectEntry Fan4Parameters_poles { 0x2803, 03, 0005, 0} // Bitlength: 0008 Obj.access: 003f           Value :0x01 1
+ObjectEntry Fan4Parameters_edges { 0x2803, 04, 0005, 0} // Bitlength: 0008 Obj.access: 003f           Value :0x05 5
+ObjectEntry Fan4Parameters_minRPM { 0x2803, 05, 0005, 0} // Bitlength: 0008 Obj.access: 003f           Value :0x05 5
+ObjectEntry Fan4Parameters_maxRPM { 0x2803, 06, 0006, 0} // Bitlength: 0010 Obj.access: 003f           Value :0x0005 5
+ObjectEntry Fan4Parameters_kpGain { 0x2803, 07, 0005, 0} // Bitlength: 0008 Obj.access: 003f           Value :0x04 4
+ObjectEntry Fan4Parameters_kiGain { 0x2803, 08, 0005, 0} // Bitlength: 0008 Obj.access: 003f           Value :0x04 4
+ObjectEntry Fan4Parameters_kdGain { 0x2803, 09, 0005, 0} // Bitlength: 0008 Obj.access: 003f           Value :0x04 4
+ObjectEntry Fan4Parameters_maxStepSize { 0x2803, 0a, 0005, 0} // Bitlength: 0008 Obj.access: 003f           Value :0x00 0
+ObjectEntry Fan4Parameters_updateTime { 0x2803, 0b, 0006, 0} // Bitlength: 0010 Obj.access: 003f           Value :0x0190 400
+ObjectEntry Fan4Parameters_errorWindow { 0x2803, 0c, 0005, 0} // Bitlength: 0008 Obj.access: 003f           Value :0x00 0
+ObjectEntry Error Code_Error Code { 0x603f, 00, 0006, 0} // Bitlength: 0010 Obj.access: 0007           Value :0x0000 0
+ObjectEntry Controlword_Controlword { 0x6040, 00, 0006, 0} // Bitlength: 0010 Obj.access: 003f           Value :0x0000 0
+ObjectEntry Statusword_Statusword { 0x6041, 00, 0006, 0} // Bitlength: 0010 Obj.access: 0007           Value :0x0250 592
+ObjectEntry Quick stop option code_Quick stop option code { 0x605a, 00, 0003, 0} // Bitlength: 0010 Obj.access: 003f           Value :0x0000 0
+ObjectEntry Shutdown option code_Shutdown option code { 0x605b, 00, 0003, 0} // Bitlength: 0010 Obj.access: 003f           Value :0x0000 0
+ObjectEntry Disable operation option code_Disable operation option code { 0x605c, 00, 0003, 0} // Bitlength: 0010 Obj.access: 003f           Value :0x0000 0
+ObjectEntry Fault reaction option code_Fault reaction option code { 0x605e, 00, 0003, 0} // Bitlength: 0010 Obj.access: 003f           Value :0x0000 0
+ObjectEntry Modes of operation_Modes of operation { 0x6060, 00, 0002, 0} // Bitlength: 0008 Obj.access: 003f           Value :0x08 8
+ObjectEntry Modes of operation display_Modes of operation display { 0x6061, 00, 0002, 0} // Bitlength: 0008 Obj.access: 0007           Value :0x00 0
+ObjectEntry Position actual value_Position actual value { 0x6064, 00, 0004, 0} // Bitlength: 0020 Obj.access: 0007           Value :0x00000000 0
+ObjectEntry Following error window_Following error window { 0x6065, 00, 0007, 0} // Bitlength: 0020 Obj.access: 003f           Value :0x00000000 0
+ObjectEntry Following error time out_Following error time out { 0x6066, 00, 0006, 0} // Bitlength: 0010 Obj.access: 003f           Value :0x0000 0
+ObjectEntry Velocity demand value_Velocity demand value { 0x606b, 00, 0004, 0} // Bitlength: 0020 Obj.access: 0007           Value :0x00000000 0
+ObjectEntry Velocity actual value_Velocity actual value { 0x606c, 00, 0004, 0} // Bitlength: 0020 Obj.access: 0007           Value :0x00000000 0
+ObjectEntry Max torque_Max torque { 0x6072, 00, 0003, 0} // Bitlength: 0010 Obj.access: 003f           Value :0x0000 0
+ObjectEntry Max current_Max current { 0x6073, 00, 0003, 0} // Bitlength: 0010 Obj.access: 003f           Value :0x00fa 250
+ObjectEntry Torque demand_Torque demand { 0x6074, 00, 0003, 0} // Bitlength: 0010 Obj.access: 0007           Value :0x0000 0
+ObjectEntry Torque actual value_Torque actual value { 0x6077, 00, 0004, 0} // Bitlength: 0020 Obj.access: 0007           Value :0x00000000 0
+ObjectEntry Current actual value_Current actual value { 0x6078, 00, 0003, 0} // Bitlength: 0010 Obj.access: 0007           Value :0x0001 1
+ObjectEntry DC link circuit voltage_DC link circuit voltage { 0x6079, 00, 0007, 0} // Bitlength: 0020 Obj.access: 003f           Value :0x00000005 5
+ObjectEntry Target position_Target position { 0x607a, 00, 0004, 0} // Bitlength: 0020 Obj.access: 003f           Value :0x00000000 0
+ObjectEntry Position range limit_SubIndex 000 { 0x607b, 00, 0005, 0} // Bitlength: 0008 Obj.access: 003f           Value :0x02 2
+ObjectEntry Position range limit_Min position range limit { 0x607b, 01, 0004, 0} // Bitlength: 0020 Obj.access: 003f           Value :0x00000000 0
+ObjectEntry Position range limit_Max position range limit { 0x607b, 02, 0004, 0} // Bitlength: 0020 Obj.access: 003f           Value :0xffffffff -1
+ObjectEntry Home offset_Home offset { 0x607c, 00, 0004, 0} // Bitlength: 0020 Obj.access: 003f           Value :0x00000000 0
+ObjectEntry Software position limit_SubIndex 000 { 0x607d, 00, 0005, 0} // Bitlength: 0008 Obj.access: 0007           Value :0x02 2
+ObjectEntry Software position limit_Min software position limit { 0x607d, 01, 0004, 0} // Bitlength: 0020 Obj.access: 003f           Value :0x00000000 0
+ObjectEntry Software position limit_Max software position limit { 0x607d, 02, 0004, 0} // Bitlength: 0020 Obj.access: 003f           Value :0x00000000 0
+ObjectEntry Polarity_Polarity { 0x607e, 00, 0005, 0} // Bitlength: 0008 Obj.access: 003f           Value :0x00 0
+ObjectEntry Max profile velocity_Max profile velocity { 0x607f, 00, 0007, 0} // Bitlength: 0020 Obj.access: 003f           Value :0x00000000 0
+ObjectEntry Max motor speed_Max motor speed { 0x6080, 00, 0007, 0} // Bitlength: 0020 Obj.access: 003f           Value :0x00000000 0
+ObjectEntry Profile velocity_Profile velocity { 0x6081, 00, 0007, 0} // Bitlength: 0020 Obj.access: 003f           Value :0x00000000 0
+ObjectEntry Profile acceleration_Profile acceleration { 0x6083, 00, 0007, 0} // Bitlength: 0020 Obj.access: 003f           Value :0x00000000 0
+ObjectEntry Profile deceleration_Profile deceleration { 0x6084, 00, 0007, 0} // Bitlength: 0020 Obj.access: 003f           Value :0x00000000 0
+ObjectEntry Quick stop deceleration_Quick stop deceleration { 0x6085, 00, 0007, 0} // Bitlength: 0020 Obj.access: 003f           Value :0x00000000 0
+ObjectEntry Position encoder resolution_Position encoder resolution { 0x608f, 00, 0007, 0} // Bitlength: 0020 Obj.access: 003f           Value :0x00000000 0
+ObjectEntry Gear ratio_SubIndex 000 { 0x6091, 00, 0005, 0} // Bitlength: 0008 Obj.access: 0007           Value :0x02 2
+ObjectEntry Gear ratio_SubIndex 001 { 0x6091, 01, 0007, 0} // Bitlength: 0020 Obj.access: 003f           Value :0x00000001 1
+ObjectEntry Gear ratio_SubIndex 002 { 0x6091, 02, 0007, 0} // Bitlength: 0020 Obj.access: 003f           Value :0x00000001 1
+ObjectEntry Feed constant_SubIndex 000 { 0x6092, 00, 0005, 0} // Bitlength: 0008 Obj.access: 0007           Value :0x02 2
+ObjectEntry Feed constant_Feed { 0x6092, 01, 0007, 0} // Bitlength: 0020 Obj.access: 003f           Value :0x00000001 1
+ObjectEntry Feed constant_Shaft revolutions { 0x6092, 02, 0007, 0} // Bitlength: 0020 Obj.access: 003f           Value :0x00000001 1
+ObjectEntry Homing method_Homing method { 0x6098, 00, 0002, 0} // Bitlength: 0008 Obj.access: 003f           Value :0x37 55
+ObjectEntry Position offset_Position offset { 0x60b0, 00, 0004, 0} // Bitlength: 0020 Obj.access: 003f           Value :0x00000000 0
+ObjectEntry Velocity offset_Velocity offset { 0x60b1, 00, 0004, 0} // Bitlength: 0020 Obj.access: 003f           Value :0x00000000 0
+ObjectEntry Torque offset_Torque offset { 0x60b2, 00, 0004, 0} // Bitlength: 0020 Obj.access: 003f           Value :0x00000000 0
+ObjectEntry Interpolation time period_SubIndex 000 { 0x60c2, 00, 0005, 0} // Bitlength: 0008 Obj.access: 0007           Value :0x02 2
+ObjectEntry Interpolation time period_Interpolation time period value { 0x60c2, 01, 0005, 0} // Bitlength: 0008 Obj.access: 003f           Value :0x00 0
+ObjectEntry Interpolation time period_Interpolation time index { 0x60c2, 02, 0002, 0} // Bitlength: 0008 Obj.access: 003f           Value :0x00 0
+ObjectEntry Supported homing methods_SubIndex 000 { 0x60e3, 00, 0005, 0} // Bitlength: 0008 Obj.access: 003f           Value :0x01 1
+ObjectEntry Supported homing methods_Homing method 37 { 0x60e3, 01, 0005, 0} // Bitlength: 0008 Obj.access: 003f           Value :0x37 55
+ObjectEntry Filament position actual value_Filament position actual value { 0x60e4, 00, 0004, 0} // Bitlength: 0020 Obj.access: 0007           Value :0x00000000 0
+ObjectEntry Filament velocity actual value_Filament velocity actual value { 0x60e5, 00, 0004, 0} // Bitlength: 0020 Obj.access: 0007           Value :0x00000000 0
+ObjectEntry Filament encoder resolution_Filament encoder resolution { 0x60e6, 00, 0007, 0} // Bitlength: 0020 Obj.access: 003f           Value :0x00000000 0
+ObjectEntry Position option code_Position option code { 0x60f2, 00, 0006, 0} // Bitlength: 0010 Obj.access: 003f           Value :0x0000 0
+ObjectEntry Following error actual value_Following error actual value { 0x60f4, 00, 0004, 0} // Bitlength: 0020 Obj.access: 0007           Value :0x00000000 0
+ObjectEntry Control effort_Control effort { 0x60fa, 00, 0004, 0} // Bitlength: 0020 Obj.access: 0007           Value :0x00000000 0
+ObjectEntry Target velocity_Target velocity { 0x60ff, 00, 0004, 0} // Bitlength: 0020 Obj.access: 003f           Value :0x00000000 0
+ObjectEntry Supported drive modes_Supported drive modes { 0x6502, 00, 0007, 0} // Bitlength: 0020 Obj.access: 0007           Value :0x00000080 128
+ObjectEntry inletTemperature_inletTemperature { 0x6800, 00, 0008, 0} // Bitlength: 0020 Obj.access: 0007           Value :27.193598
+ObjectEntry exhaustTemperature_exhaustTemperature { 0x6801, 00, 0008, 0} // Bitlength: 0020 Obj.access: 0007           Value :6270.524414
+ObjectEntry blowerRPM_blowerRPM { 0x6802, 00, 0006, 0} // Bitlength: 0010 Obj.access: 0007           Value :0x0000 0
+ObjectEntry blendedTemperature_blendedTemperature { 0x6803, 00, 0008, 0} // Bitlength: 0020 Obj.access: 0007           Value :6270.524414
+ObjectEntry heaterStatusWord_heaterStatusWord { 0x6820, 00, 0006, 0} // Bitlength: 0010 Obj.access: 0007           Value :0x0000 0
+ObjectEntry blowerStatusWord_blowerStatusWord { 0x6821, 00, 0006, 0} // Bitlength: 0010 Obj.access: 0007           Value :0x0000 0
+ObjectEntry temperatureTarget_temperatureTarget { 0x6841, 00, 0008, 0} // Bitlength: 0020 Obj.access: 003f           Value :0.000000
+ObjectEntry blowerTarget_blowerTarget { 0x6842, 00, 0006, 0} // Bitlength: 0010 Obj.access: 003f           Value :0x0000 0
+ObjectEntry UpperChamberTemp_UpperChamberTemp { 0x7000, 00, 0008, 0} // Bitlength: 0020 Obj.access: 0007           Value :3.299194
+ObjectEntry binaryInputs_SubIndex 000 { 0x7004, 00, 0005, 0} // Bitlength: 0008 Obj.access: 0007           Value :0x08 8
+ObjectEntry binaryInputs_button1 { 0x7004, 01, 0001, 0} // Bitlength: 0001 Obj.access: 00bf           Value :TRUE
+ObjectEntry binaryInputs_button2 { 0x7004, 02, 0001, 0} // Bitlength: 0001 Obj.access: 00bf           Value :TRUE
+ObjectEntry binaryInputs_doorOpen { 0x7004, 03, 0001, 0} // Bitlength: 0001 Obj.access: 00bf           Value :TRUE
+ObjectEntry binaryInputs_digitalIn1 { 0x7004, 04, 0001, 0} // Bitlength: 0001 Obj.access: 00bf           Value :FALSE
+ObjectEntry binaryInputs_digitalIn2 { 0x7004, 05, 0001, 0} // Bitlength: 0001 Obj.access: 00bf           Value :FALSE
+ObjectEntry binaryInputs_digitalIn3 { 0x7004, 06, 0001, 0} // Bitlength: 0001 Obj.access: 00bf           Value :FALSE
+ObjectEntry binaryInputs_digitalIn4 { 0x7004, 07, 0001, 0} // Bitlength: 0001 Obj.access: 00bf           Value :FALSE
+ObjectEntry binaryInputs_digitalIn5 { 0x7004, 08, 0001, 0} // Bitlength: 0001 Obj.access: 00bf           Value :FALSE
+ObjectEntry Modular Device Profile_SubIndex 000 { 0xf000, 00, 0005, 0} // Bitlength: 0008 Obj.access: 0007           Value :0x02 2
+ObjectEntry Modular Device Profile_Index distance  { 0xf000, 01, 0006, 0} // Bitlength: 0010 Obj.access: 0007           Value :0x0800 2048
+ObjectEntry Modular Device Profile_Maximum number of modules  { 0xf000, 02, 0006, 0} // Bitlength: 0010 Obj.access: 0007           Value :0x0003 3
+ObjectEntry Module Profile List_SubIndex 000 { 0xf010, 00, 0005, 0} // Bitlength: 0008 Obj.access: 0007           Value :0x03 3
+ObjectEntry Module Profile List_SubIndex 001 { 0xf010, 01, 0007, 0} // Bitlength: 0020 Obj.access: 0007           Value :0x00010192 65938
+ObjectEntry Module Profile List_SubIndex 002 { 0xf010, 02, 0007, 0} // Bitlength: 0020 Obj.access: 0007           Value :0x00020192 131474
+ObjectEntry Module Profile List_SubIndex 003 { 0xf010, 03, 0007, 0} // Bitlength: 0020 Obj.access: 0007           Value :0x00031389 201609
+End followerinfo, close socket
+End program
