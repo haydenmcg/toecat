@@ -17,6 +17,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <iostream>
 
 #include "ethercat.h"
 
@@ -36,6 +37,7 @@
 #define MAXSLENGTH 256
 
 uint8 ebuf[MAXBUF];
+char productAlias [3];
 uint8 ob;
 uint16 ow;
 int os;
@@ -47,6 +49,8 @@ int mode;
 char sline[MAXSLENGTH];
 
 #define IHEXLENGTH 0x20
+
+using namespace std;
 
 void calc_crc(uint8 *crc, uint8 b)
 {
@@ -344,6 +348,10 @@ void eepromtool(char *ifname, int slave, int mode, char *fname)
                printf("   calculated     : %4.4X\n", SIIcrc(&ebuf[0]));
                printf(" Vendor ID        : %8.8X\n", *(uint32 *)(wbuf + 0x08));
                printf(" Product Code     : %8.8X\n", *(uint32 *)(wbuf + 0x0A));
+               productAlias[0] = *(ebuf + 23);
+               productAlias[1] = *(ebuf + 22);
+               productAlias[2] = *(ebuf + 21); 
+               printf(" Product Alias    : %s \n", productAlias);  
                printf(" Revision Number  : %8.8X\n", *(uint32 *)(wbuf + 0x0C));
                printf(" Serial Number    : %8.8X\n", *(uint32 *)(wbuf + 0x0E));
                printf(" Mailbox Protocol : %4.4X\n", *(wbuf + 0x1C));
@@ -419,7 +427,25 @@ void eepromtool(char *ifname, int slave, int mode, char *fname)
          }
          else
          {
-            printf("Slave number outside range.\n");
+            if ((mode == MODE_INFO) && (slave == 0))
+            {
+               for(int i = 1; i <= ec_slavecount; ++i)
+               {
+                  eeprom_read(i, 0x0000, MINBUF);
+                  wbuf = (uint16 *)&ebuf[0];
+                  printf("Slave %d data\n", i);
+                  productAlias[0] = *(ebuf + 23);
+                  productAlias[1] = *(ebuf + 22);
+                  productAlias[2] = *(ebuf + 21); 
+                  printf(" Product Alias    : %s \n", productAlias);  
+                  printf(" Revision Number  : %8.8X\n", *(uint32 *)(wbuf + 0x0C));
+                  printf(" \n");
+               }
+            }
+            else
+            {
+               printf("Slave number outside range.\n");
+            }
          }
       }
       else
